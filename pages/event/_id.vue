@@ -1,19 +1,24 @@
 <template>
   <div>
-    <h1>Events</h1>
+    <h1>Event # {{ id }}</h1>
   </div>
 </template>
+
 <script>
 export default {
+  computed: {
+    id() {
+      return this.$route.params.id
+    },
+  },
   head() {
-    // <-- property used by vue-meta to add header tags
     return {
-      title: 'Event Listing', // <-- For our title tag
+      title: 'Event #' + this.id,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'where you can find all the events in your neigborhood.',
+          content: 'What you need to know about the event #' + this.id,
         },
       ],
     }
