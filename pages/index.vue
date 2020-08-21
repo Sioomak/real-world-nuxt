@@ -3,20 +3,15 @@
     <h1>Events</h1>
   </div>
 </template>
-<script>
-export default {
-  head() {
-    // <-- property used by vue-meta to add header tags
-    return {
-      title: 'Event Listing', // <-- For our title tag
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'where you can find all the events in your neigborhood.',
-        },
-      ],
+    <script>
+    export default {
+      ...
+      asyncData(context) {
+        return context.$axios.get('http://localhost:3000/events').then(response => {
+          return {
+            events: response.data
+          }
+        })
+      }
     }
-  },
-}
-</script>
+    </script>
