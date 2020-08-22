@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>Create an Event!</h1>
+    <h1>Create an Event</h1>
   </div>
 </template>
-
 <script>
 export default {
   head() {
@@ -13,10 +12,10 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'You can create a new event in your neighborhood',
-        },
-      ],
+          content: 'You can create a new event in your neighborhood'
+        }
+      ]
     }
-  },
+  }
 }
 </script>

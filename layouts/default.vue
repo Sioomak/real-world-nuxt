@@ -4,26 +4,26 @@
     <nuxt />
   </div>
 </template>
+
 <script>
 import NavBar from '~/components/NavBar.vue'
 export default {
-  components: {
-    NavBar,
-  },
   head() {
-    // <-- property used by vue-meta to add header tags
     return {
-      titleTemplate: '$s Real World Events', // <-- For our title tag
+      titleTemplate: '%s - Real World Events',
       meta: [
         {
           hid: 'description',
-          name: 'description', // <-- for our meta description tag
+          name: 'description',
           content:
-            'Where you can find all the events taking place in your neighborhood',
-        },
-      ],
+            'Where you can find all the events taking place in your neighborhood'
+        }
+      ]
     }
   },
+  components: {
+    NavBar
+  }
 }
 </script>
 
